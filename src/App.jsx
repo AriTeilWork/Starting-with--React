@@ -2,7 +2,7 @@
 import reactImg from './assets/react-core-concepts.png';
 import componentsImg from './assets/components.png';
 import {CORE_CONCEPTS} from './data';
-import Header from './components/Header.jsx';
+import Header from './components/Header/Header.jsx';
 import CoreConcepts from './components/CoreConsept.jsx';
 
 //function CoreConcepts({title, description, image}){
