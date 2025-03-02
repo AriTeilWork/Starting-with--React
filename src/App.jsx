@@ -20,6 +20,7 @@ import CoreConcepts from './components/CoreConsept.jsx';
 function App() {
   return (
     <div>
+      <header><h1> Hello Word! </h1> </header>
       <Header></Header>
       <main>
         <section id='core-concepts'>
