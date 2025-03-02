@@ -2,14 +2,8 @@
 import reactImg from './assets/react-core-concepts.png';
 import componentsImg from './assets/components.png';
 import {CORE_CONCEPTS} from './data';
-
-const ReactDecsriptions = ['Fundamental','Crucial','Core'];
-
-function genRandomInt(max) {
-  return Math.floor(Math.random() * (max + 1));
-}
-
-
+import Header from './components/Header.jsx';
+import CoreConcepts from './components/CoreConsept.jsx';
 
 //function CoreConcepts({title, description, image}){
 //  return(
@@ -21,14 +15,7 @@ function genRandomInt(max) {
 //  );
 //}
 
-function CoreConcepts(props) {
-  return( <li>
-    <img src={props.image} alt={props.title}/>
-    <h3>{props.title}</h3>
-    <p>{props.description}</p>
-  </li>
-  );
-}
+
 
 function App() {
   return (
