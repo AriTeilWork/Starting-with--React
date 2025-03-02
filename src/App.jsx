@@ -20,7 +20,7 @@ import { i, s } from 'framer-motion/client';
 
 
 function App() {
-  const  [selectedTopic, setSelectedTopic] = useState('please click a button');
+  const  [selectedTopic, setSelectedTopic] = useState();
 
 
   function handleSelect(selectedButton) {
@@ -37,7 +37,8 @@ function App() {
         <section id='core-concepts'>
         <h2>Core Concepts</h2>
           <ul>
-            <CoreConcepts
+            {CORE_CONCEPTS.map((concept) => CoreConcepts(concept))}
+            {/* <CoreConcepts
               title={CORE_CONCEPTS[0].title}
               description={CORE_CONCEPTS[0].description}
               image={CORE_CONCEPTS[0].image}
@@ -52,24 +53,32 @@ function App() {
               title={CORE_CONCEPTS[3].title}
               description={CORE_CONCEPTS[3].description}
               image={CORE_CONCEPTS[3].image}
-            />
+            /> */}
           </ul>
         </section>
         <section id='examples'>
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-            <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-            <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-            <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
+            <TabButton 
+              isSelected={selectedTopic === 'components'} 
+              onSelect={() => handleSelect('components')}
+              >Components
+              </TabButton>
+            <TabButton isSelected={selectedTopic === 'jsx'} onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+            <TabButton isSelected={selectedTopic === 'props'} onSelect={() => handleSelect('props')}>Props</TabButton>
+            <TabButton isSelected={selectedTopic === 'state'} onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
-          <div id='tab-content'>
+          
+            {!selectedTopic ? <p>Please select a topic.</p> : null}
+            {selectedTopic ?(
+            <div id='tab-content'>
             <h3>{EXAMPLES[selectedTopic].title}</h3>
             <p>{EXAMPLES[selectedTopic].description}</p>
             <pre>
               <code>{EXAMPLES[selectedTopic].code}</code>
             </pre>
             </div>
+            ): null}
         </section>
 
 
