@@ -4,6 +4,7 @@ import componentsImg from './assets/components.png';
 import {CORE_CONCEPTS} from './data';
 import Header from './components/Header/Header.jsx';
 import CoreConcepts from './components/CoreConsept.jsx';
+import TabButton from './components/TabButton.jsx';
 
 //function CoreConcepts({title, description, image}){
 //  return(
@@ -44,6 +45,19 @@ function App() {
             />
           </ul>
         </section>
+        <section id='examples'>
+          <h2>Examples</h2>
+          <menu>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
+
+          </menu>
+
+        </section>
+
+
       </main>
     </div>
   );
