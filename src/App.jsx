@@ -7,6 +7,13 @@ import CoreConcepts from './components/CoreConsept.jsx';
 import TabButton from './components/TabButton.jsx';
 import { i, s } from 'framer-motion/client';
 
+import React from 'react';
+import Greeting from './components/Greeting.jsx';
+import ThemeToggle from './components/ThemeToggle.jsx';
+import LoginMessage from './components/LoginMessage.jsx';
+import TodoList from './components/TodoList.jsx';
+
+
 //function CoreConcepts({title, description, image}){
 //  return(
 //    <li>
@@ -28,6 +35,9 @@ function App() {
     console.log(selectedButton);
   }
   console.log('App component rendered');
+
+  const tasks = ["Study", "Eat", "Sleep", "Walk", "Read", "Relax"];
+  const isUserLoggedIn = true;
 
   return (
     <div>
@@ -81,6 +91,13 @@ function App() {
             ): null}
         </section>
 
+        <div>
+      <Greeting name="John" />
+      <ThemeToggle />
+      <LoginMessage isLoggedIn={isUserLoggedIn} />
+      <h2>To-Do List</h2>
+      <TodoList todos={tasks} />
+    </div>
 
       </main>
     </div>

@@ -1,10 +1,11 @@
-import React from 'react';
+// src/components/TodoList.jsx
+import React from "react";
 
-export default function TodoList(props) {
+export default function TodoList({ todos }) {
   return (
     <ul>
-      {props.todos.map((todo, index) => (
-        <li key={index}>{todo}</li>
+      {todos.map((task, index) => (
+        <li key={index}>{task}</li>
       ))}
     </ul>
   );

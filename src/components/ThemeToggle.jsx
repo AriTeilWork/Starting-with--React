@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import '../components/ThemToggle.css';
+// src/components/ThemeToggle.jsx
+import React, { useState } from "react";
+import "./ThemeToggle.css";
 
 export default function ThemeToggle() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    };
-  
-    return (
-      <button onClick={toggleTheme}>
-        {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-      </button>
-    );
-  }
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  return (
+    <div className={`theme-container ${theme}`}>
+      <p>Current Theme: {theme}</p>
+      <button onClick={toggleTheme}>Toggle Theme</button>
+    </div>
+  );
+}

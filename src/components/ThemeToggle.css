@@ -1,11 +1,16 @@
-.light-theme {
-    background-color: white;
-    color: black;
-    padding: 20px;
-  }
-  
-  .dark-theme {
-    background-color: black;
-    color: white;
-    padding: 20px;
-  }
+/* src/components/ThemeToggle.css */
+.theme-container {
+  padding: 20px;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+.dark {
+  background: black;
+  color: white;
+}
