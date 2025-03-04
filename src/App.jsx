@@ -92,7 +92,7 @@ function App() {
         </section>
 
         <div>
-          <Greeting name="John" />
+          <Greeting name="Yevhenii e2205685" />
           <ThemeToggle />
           <LoginMessage isLoggedIn={isUserLoggedIn} />
           <h2>To-Do List</h2>
