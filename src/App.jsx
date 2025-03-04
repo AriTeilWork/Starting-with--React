@@ -92,12 +92,12 @@ function App() {
         </section>
 
         <div>
-      <Greeting name="John" />
-      <ThemeToggle />
-      <LoginMessage isLoggedIn={isUserLoggedIn} />
-      <h2>To-Do List</h2>
-      <TodoList todos={tasks} />
-    </div>
+          <Greeting name="John" />
+          <ThemeToggle />
+          <LoginMessage isLoggedIn={isUserLoggedIn} />
+          <h2>To-Do List</h2>
+          <TodoList todos={tasks} />
+        </div>
 
       </main>
     </div>
